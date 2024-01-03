@@ -10,11 +10,10 @@ enum planck_keycodes { QWERTY = SAFE_RANGE };
 #define VIM     MO(_VIM)
 #define PAD     MO(_NUMPAD)
 #define ADJUST  MO(_ADJUST)
-#define ALT_SFT RALT(KC_RSFT)
 #define GUI_SFT RGUI(KC_RSFT)
 #define CTL_SFT RCTL(KC_RSFT)
 
-enum unicode_names { AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT, ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO, LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES, CJT, STL, SQR, TRN, OPP, NND, SND };
+enum unicode_names { AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT, ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO, LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES, CJT, STL, SQR, TRN, OPP, NND, SND, FIRE, EARTH, AIR, WATER };
 
 const uint32_t PROGMEM unicode_map[] = {
     [AE] = 0x2609,  // ☉
@@ -45,7 +44,11 @@ const uint32_t PROGMEM unicode_map[] = {
     [TRN] = 0x25B3, // △
     [OPP] = 0x260D, // ☍
     [NND] = 0x260A, // ☊
-    [SND] = 0x260B  // ☋
+    [SND] = 0x260B, // ☋
+    [FIRE] = 0x1F702,   // 🜂
+    [EARTH] = 0x1F703,  // 🜃
+    [AIR] = 0x1F701,    // 🜁
+    [WATER] = 0x1F704   // 🜄
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -70,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_UNICODE] = LAYOUT_planck_grid(
         /* row 1*/
         _______,
-        _______,
+        UM(FIRE),
         UP(CAPRICORN, AQUARIUS),
         UP(SAGITTARIUS, PISCES),
         UM(LEO),
@@ -83,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,
         /*home row*/    
         _______,
-        _______,
+        UM(EARTH),
         UM(PB),
         UM(SN),
         UM(AE),
@@ -96,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,
         /*row 3*/
         _______,
-        _______,
+        UM(AIR),
         UM(UNS),
         UM(NPN),
         _______,
@@ -108,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         UM(CJT),
         _______,
         /*row 4*/
-        _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______       
+        _______,UM(WATER),_______,_______,_______,_______,_______,_______,_______,_______,_______,_______       
     ),
     [_VIM] = LAYOUT_planck_grid(
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
@@ -127,5 +130,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         EE_CLR, XXXXXXX,MU_NEXT,AU_ON,  AU_OFF, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         XXXXXXX,AU_NEXT,AU_PREV,MU_ON,  MU_OFF, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
-    ),
+    )
 };
