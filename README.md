@@ -12,11 +12,13 @@ already dabble in the hobby. If anything, this is a thema mundi study tool for
 anyone who likes C, so if you're in that demographic, we should start a Discord
 server.
 
-![astrolokeys](astrolokeys.png)
+## use
 
 The repo's main event is `unicodemap.c`, a modular hunk of code for you to throw
 into your keymap and arrange how you wish. However, I stand by my layout, which
 I think is perfectly adaptable to a more standard, staggered board.
+
+![astrolokeys](astrolokeys.png)
 
 - The home row is the seven classical planets divided by
     [sect](https://www.youtube.com/watch?v=1XfPLTQuB9MP), with Mercury in the
@@ -32,12 +34,14 @@ I think is perfectly adaptable to a more standard, staggered board.
         Jupiter (Pisces) for my agenda even greater than astrological tradition
         (lesbianism).
 - The five major aspects occupy `, . /` or `< > ?`, which just makes me happy in
-    terms of punctuation. Shift to acess the larger angles.
+    terms of punctuation. `Shift` to acess the larger angles.
 - Big nerd `enum` table bonus: the planets' aliases are their metals in alchemy.
 - Threw in the classical elements' alchemical symbols for fun,  since the
     Planck's 4x12 grid is numerological.
 
-## QMK docs
+![gay](https://64.media.tumblr.com/9bb26e7b1de7176e06d38934e0522ea0/04db6912d086d74c-42/s540x810/e93482e7a89403f40a79d5a015c08eae5fc1d84e.gifv)
+
+### QMK docs
 
 - [Unicode Support](https://docs.qmk.fm/#/feature_unicode): explains the
     contents of `config.h` and `rules.mk`.
