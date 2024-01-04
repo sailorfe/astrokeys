@@ -1,24 +1,25 @@
 # actual astrolokeys
 
-sailorhg and Cassidoo's [keycaps](https://astrolokeys.com/) got me into
-mechanical keyboards in the first place, and it was only when showing off my
-Planck to a new astrologer friend that it occured to me to make a functional
-astrologers' keyboard. This is a QMK unicode map pedantically dictated by
-Hellenstic astrological concepts like essential dignity.
+![astrolokeys](astrolokeys.png)
 
-I imagine the Venn diagram of QMK users and astrologers is very slim, since I
+
+I suspect the Venn diagram of QMK users and astrologers is very slim, since I
 can't imagine an astrologer dropping $200 on a custom keyboard if they don't
-already dabble in the hobby. If anything, this is a thema mundi study tool for
-anyone who likes C, so if you're in that demographic, we should start a Discord
-server.
+already have one. [sailorhg and Cassidoo's keycaps](https://astrolokeys.com/)
+got me into mechanical keyboards in the first place, and it was only when
+showing off my astrolokey'd Planck to a new astrologer friend that it occured
+to me to make something extremely niche and practical. This is a QMK unicode
+map pedantically dictated by Western astrological concepts like essential
+dignity. If anything, this is a thema mundi study tool for anyone who likes C,
+so if you're in that demographic, we should start a Discord server.
 
 ## use
 
-The repo's main event is `unicodemap.c`, a modular hunk of code for you to throw
-into your keymap and arrange how you wish. However, I stand by my layout, which
-I think is perfectly adaptable to a more standard, staggered board.
-
-![astrolokeys](astrolokeys.png)
+Assuming you're using `qmk-cli` since the configurator is tedious when it comes
+to custom keycodes. The repo's main event is `unicodemap.c`, a modular hunk of
+code for you to throw in front of your keymap and arrange how you wish.
+However, I stand by my layout, which I think is perfectly adaptable to a more
+standard, horzontally staggered board, and a nerdy teaching tool.
 
 - The home row is the seven classical planets divided by
     [sect](https://www.youtube.com/watch?v=1XfPLTQuB9MP), with Mercury in the
@@ -29,7 +30,7 @@ I think is perfectly adaptable to a more standard, staggered board.
     astrology, you have to work to get the north node.
 - The outer planets are no more than 2 keys from their modern domiciles.
     - Pluto is next to the Aries/Scorpio key, aka QWERTY "P" for unintended
-        pneumoic ease;
+        mnemonic  ease;
     - Uranus and Neptune are next to each other under Saturn (Aquarius) and
         Jupiter (Pisces) for my agenda even greater than astrological tradition
         (lesbianism).
@@ -37,7 +38,7 @@ I think is perfectly adaptable to a more standard, staggered board.
     terms of punctuation. `Shift` to acess the larger angles.
 - Big nerd `enum` table bonus: the planets' aliases are their metals in alchemy.
 - Threw in the classical elements' alchemical symbols for fun,  since the
-    Planck's 4x12 grid is numerological.
+    Planck's 4x12 grid is sooo astrological or numerological or trigonometric.
 
 ![gay](https://64.media.tumblr.com/9bb26e7b1de7176e06d38934e0522ea0/04db6912d086d74c-42/s540x810/e93482e7a89403f40a79d5a015c08eae5fc1d84e.gifv)
 
