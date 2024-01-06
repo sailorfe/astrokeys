@@ -1,7 +1,7 @@
-# actual astrolokeys
+# astrokeys
 
 <p align="center">
-    <a href="https://gist.github.com/kdlrose/7066eb4ec33393155b9f1c9cfca5eb11"><img src="astrolokeys.png" alt="Keyboard Layout Editor"></a>
+    <a href="https://gist.github.com/kdlrose/7066eb4ec33393155b9f1c9cfca5eb11"><img src="astrokeys.png" alt="Keyboard Layout Editor"></a>
     <br>
     <caption>colors purely illustrative ok</caption>
 </p>
@@ -28,14 +28,14 @@ I assume you're using [qmk-cli](https://github.com/qmk/qmk_cli) since the config
 
 ### Modular
 
-Copy `unicodemap.c` into the top of your keymap. I've had luck keeping it between all my `#define`s and the layout itself. Add or remove or ignore anything! If you use asteroids or minor angles, those are pretty much all in block [U+2600](https://www.compart.com/en/unicode/block/U+2600). 
+Copy `unicodemap.c` into the top of your keymap. Add or remove or ignore anything! If you use asteroids or minor angles, those are pretty much all in block [U+2600](https://www.compart.com/en/unicode/block/U+2600). 
 
 ### just lifting the example map [PLANCK REV7 ONLY]
 
 First, look at `keymap.c` and make sure you actually want it, or edit as you see fit. It's pretty close to the first three layers of the default, with the addition of a numpad (useful since astrology is math) and vi-style navigation. I use what would be the right alt key as a momentary layer toggle. 
 
-1. Save the whole folder `planck-rev7` to your local `qmk_firmware` dev branch: `qmk_firmware/keyboards/planck/rev7/keymaps`. I would rename it something else to avoid redundancy, like `astrolokeys` or `astrokeys`.
-    * The only edit you may need to do is in `config.h`: defining [your input method](https://docs.qmk.fm/#/feature_unicode?id=input-modes) based on what OS(es) you use.
+1. Save the whole folder `planck-rev7` to your local `qmk_firmware` dev branch: `qmk_firmware/keyboards/planck/rev7/keymaps`. I would rename it something else to avoid redundancy, like `astrokeys`.
+    * The only edit you may need to do is in `config.h`: defining [your input method](https://docs.qmk.fm/#/feature_unicode?id=input-modes) based on what OS(es) you use. A warning, though, that Linux support is pretty bad. QMK seems fine with mainstream distributions with desktop environments, but if you're like me and run a WM with as little GTK as possible, good luck.
 2. Run `qmk compile -kb planck/rev7 -km [KEYMAP NAME]`. This should write a `.bin` file straight to `qmk_firmware`.
 3. Put your Planck in bootloader mode, then run `qmk flash -kb planck/rev7 -km [KEYMAP NAME]`.
 4. On macOS: Go to System Preferences > Keyboard > Input Sources and add (+) Unicode Hex Input.

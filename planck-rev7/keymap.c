@@ -4,6 +4,8 @@ enum planck_layers { _QWERTY, _LOWER, _RAISE, _UNICODE, _VIM, _NUMPAD, _ADJUST }
 
 enum planck_keycodes { QWERTY = SAFE_RANGE };
 
+enum unicode_names { AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT, ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO, LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES, CJT, STL, SQR, TRN, OPP, NND, SND, FIRE, EARTH, AIR, WATER };
+
 #define LOWER   MO(_LOWER)
 #define RAISE   MO(_RAISE)
 #define UTF     MO(_UNICODE)
@@ -12,8 +14,6 @@ enum planck_keycodes { QWERTY = SAFE_RANGE };
 #define ADJUST  MO(_ADJUST)
 #define GUI_SFT RGUI(KC_RSFT)
 #define CTL_SFT RCTL(KC_RSFT)
-
-enum unicode_names { AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT, ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO, LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES, CJT, STL, SQR, TRN, OPP, NND, SND, FIRE, EARTH, AIR, WATER };
 
 const uint32_t PROGMEM unicode_map[] = {
     [AE] = 0x2609,  // ☉
